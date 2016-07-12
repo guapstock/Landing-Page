@@ -1,0 +1,265 @@
+body {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  color: #333;
+  line-height: 20px;
+}
+
+.stock-card {
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 25px 25px 25px 42px;
+  box-shadow: 0 20px 60px 0 rgba(0, 0, 0, .1);
+  font-size: 14px;
+}
+
+.stock-name {
+  display: inline-block;
+  margin-right: 20px;
+  font-family: Roboto, sans-serif;
+  font-size: 2.714em;
+  font-weight: 300;
+}
+
+.stock-name-expanded {
+  display: inline-block;
+  font-family: Roboto, sans-serif;
+  color: #9e9e9e;
+  font-size: 2em;
+  font-weight: 300;
+}
+
+.price {
+  display: inline-block;
+  margin-top: 25px;
+  margin-right: 15px;
+  font-family: Roboto, sans-serif;
+  font-size: 2.929em;
+  font-weight: 500;
+}
+
+.percentage-change {
+  display: inline-block;
+  font-family: Roboto, sans-serif;
+  color: #3a913e;
+  font-size: 1.714em;
+  font-weight: 300;
+}
+
+.actual-graph {
+  height: 311px;
+  margin-top: 40px;
+}
+
+.stat-label {
+  font-family: Roboto, sans-serif;
+  color: #9e9e9e;
+  font-size: 1em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.stat-label.predictions {
+  font-size: 0.8571em;
+  font-weight: 700;
+}
+
+.actual-stat {
+  font-family: Roboto, sans-serif;
+  font-size: 1.143em;
+  font-weight: 500;
+}
+
+.right-column {
+  margin-top: 85px;
+  margin-bottom: -20px;
+  padding-right: 0px;
+  padding-left: 0px;
+  text-align: center;
+}
+
+.stock-info {
+  display: block;
+  max-width: 90px;
+  margin-right: auto;
+  margin-bottom: 35px;
+  margin-left: auto;
+}
+
+.bet-btn {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 15px 25px;
+  border: 1px solid #f3f3f3;
+  box-shadow: 0 3px 11px 0 rgba(0, 0, 0, .2);
+  -webkit-transition: all 100ms ease;
+  transition: all 100ms ease;
+  font-family: Roboto, sans-serif;
+  color: #00c853;
+  font-size: 1.4em;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.bet-btn:hover {
+  border-color: #00c853;
+  background-color: #00c853;
+  color: #fff;
+}
+
+.bet-btn.bet-down {
+  color: #f44336;
+}
+
+.bet-btn.bet-down:hover {
+  border-color: #f44336;
+  background-color: #f44336;
+  color: #fff;
+}
+
+.people-prediction.bet-down-stat {
+  text-align: right;
+}
+
+.bet-down-column {
+  text-align: right;
+}
+
+.btn-row {
+  margin-top: 2.214em;
+}
+
+.graph-img {
+  max-height: 132%;
+  max-width: 158%;
+  margin-top: -39px;
+}
+
+.navbar {
+  background-color: #fff;
+}
+
+.navbar-button {
+  margin-right: 5px;
+  margin-left: 5px;
+  border: 1px none #000;
+  -webkit-transition: all 150ms ease;
+  transition: all 150ms ease;
+  font-family: Roboto, sans-serif;
+  color: #00c853;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.navbar-button:hover {
+  color: #000;
+}
+
+.navbar-button.sign-up-btn {
+  margin-top: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-style: solid;
+  border-color: #00c853;
+  border-radius: 5px;
+  -webkit-transition: all 150ms ease;
+  transition: all 150ms ease;
+  color: #00c853;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.navbar-button.sign-up-btn:hover {
+  background-color: #00c853;
+  color: #fff;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin-top: 15px;
+}
+
+.container {
+  display: block;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.homepage-row {
+  padding-top: 100px;
+}
+
+.introduction-container {
+  padding-top: 41px;
+  padding-right: 120px;
+}
+
+.company-name {
+  font-family: Roboto, sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+
+.company-desc {
+  width: auto;
+  max-width: 440px;
+  margin-top: 30px;
+  font-family: Roboto, sans-serif;
+  font-size: 38px;
+  line-height: 48px;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+}
+
+.subtext {
+  max-width: 300px;
+  margin-top: 40px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.form-wrapper {
+  padding-top: 21px;
+}
+
+.submit-button {
+  margin-top: 13px;
+  padding: 15px 20px;
+  border-radius: 5px;
+  background-color: #d6d962;
+  font-family: Roboto, sans-serif;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.name-field {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  padding-top: 20px;
+  padding-right: 12px;
+  padding-bottom: 20px;
+  font-family: Roboto, sans-serif;
+  color: rgba(51, 51, 51, .25);
+  font-weight: 500;
+  letter-spacing: 0px;
+}
+
+.email-field {
+  margin-top: 0px;
+  padding-top: 8px;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+
