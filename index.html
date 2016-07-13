@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created in Webflow. http://www.webflow.com-->
-<!-- Last Published: Tue Jul 12 2016 17:44:07 GMT+0000 (UTC) -->
+<!-- Last Published: Wed Jul 13 2016 20:41:54 GMT+0000 (UTC) -->
 <html data-wf-site="5784f2965ff1ffc12fe72539" data-wf-page="5784f2965ff1ffc12fe72538">
 <head>
   <meta charset="utf-8">
@@ -10,23 +10,6 @@
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/webflow.css">
   <link rel="stylesheet" type="text/css" href="css/guap-launch.webflow.css">
-  <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
-  <script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBdVJTeALoBBz4K_9zQtb_LkSJBFkpo82I",
-    authDomain: "api-user-test.firebaseapp.com",
-    databaseURL: "https://api-user-test.firebaseio.com",
-    storageBucket: "api-user-test.appspot.com",
-  };
-  firebase.initializeApp(config);
-
-  function writeUserData(name, email) {
-  firebase.database().ref('mail/' + name.set({
-    email: email
-  });
-}
-  </script>
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
   <script>
     WebFont.load({
@@ -38,96 +21,148 @@
   <script type="text/javascript" src="js/modernizr.js"></script>
   <link rel="shortcut icon" type="image/x-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico">
   <link rel="apple-touch-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png">
+  <style>
+    @keyframes animatedBackground {
+    	from { background-position: 0% 0%; }
+    	to { background-position: 100% 100%; }
+    }
+    .hero-section {
+    	animation: animatedBackground 100s linear infinite;
+    }
+  </style>
 </head>
-<body>
-  <div class="navbar w-nav" data-animation="default" data-collapse="medium" data-contain="1" data-duration="400">
-    <div class="navbar-container w-container">
-      <a class="company-logo-container w-nav-brand" href="http://guapstock.com"><img class="company-logo" src="images/Guap V3 with border-01.png" width="144">
-      </a>
-      <nav class="w-nav-menu" role="navigation"><a class="navbar-button w-nav-link" href="#">COMPANY</a><a class="navbar-button sign-up-btn w-nav-link" href="https://www.facebook.com/guapstock/">CONTACT US</a>
-      </nav>
-      <div class="w-nav-button">
-        <div class="w-icon-nav-menu"></div>
+<body class="body">
+  <div class="hero-section w-section">
+    <div class="navbar w-nav" data-animation="default" data-collapse="medium" data-contain="1" data-duration="400">
+      <div class="navbar-container w-container">
+        <a class="company-logo-container w-nav-brand" href="http://guapstock.com"><img class="company-logo" src="images/Guap V3 with border-01.png" width="144">
+        </a>
+        <nav class="w-nav-menu" role="navigation"><a class="navbar-button w-nav-link" href="#">COMPANY</a><a class="navbar-button sign-up-btn w-nav-link" href="http://tinyurl.com/guapstock" target="_blank">SIGN UP FOR BETA</a>
+        </nav>
+        <div class="w-nav-button">
+          <div class="w-icon-nav-menu"></div>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="container">
-    <div class="homepage-row w-row">
-      <div class="introduction-text w-col w-col-6">
-        <div class="introduction-container">
-          <div class="company-name">Guap</div>
-          <div class="company-desc">Stock market game with real world rewards.
-            <br>
-            <br>Low entry, high returns. With&nbsp;a side of guac.</div>
-          <div class="subtext">We're still in alpha, so join our mailing list for some dope updates!</div>
-          <div class="form-wrapper w-form">
-            <form data-name="Email Form" id="email-form" name="email-form">
-              <input class="name-field w-input" data-name="Name" id="name" maxlength="256" name="name" placeholder="Enter your name" type="text">
-              <input class="email-field w-input" data-name="Email" id="email" maxlength="256" name="email" placeholder="Enter your email address" required="required" type="email">
-              <input class="submit-button w-button" data-wait="Please wait..." type="submit" value="keep me posted!">
-            </form>
-            <div class="w-form-done">
-              <div>Thank you! Your submission has been received!</div>
+    <div class="container">
+      <div class="homepage-row w-row">
+        <div class="introduction-text w-col w-col-6">
+          <div class="introduction-container">
+            <div class="company-name">Guap</div>
+            <div class="company-desc">Stock market game with real world rewards.
+              <br>
+              <br>Low entry, high returns. With&nbsp;a side of guap.</div>
+            <div class="subtext">We're still in alpha, so join our mailing list for some updates!</div>
+            <div class="form-wrapper w-form">
+              <form data-name="Email Form" id="email-form" name="email-form">
+                <input class="name-field w-input" data-name="Name" id="name" maxlength="256" name="name" placeholder="Enter your name" type="text">
+                <input class="email-field w-input" data-name="Email" id="email" maxlength="256" name="email" placeholder="Enter your email address" required="required" type="email">
+                <input class="submit-button w-button" data-wait="Please wait..." type="submit" value="keep me posted!">
+              </form>
+              <div class="w-form-done">
+                <div>Thank you! Your submission has been received!</div>
+              </div>
+              <div class="w-form-fail">
+                <div>Oops! Something went wrong while submitting the form</div>
+              </div>
             </div>
-            <div class="w-form-fail">
-              <div>Oops! Something went wrong while submitting the form</div>
+          </div>
+        </div>
+        <div class="card-column w-col w-col-6">
+          <div class="stock-card">
+            <div class="card-top-row w-row">
+              <div class="left-column w-col w-col-9">
+                <div class="card-title-container">
+                  <div class="stock-name">GOOG</div>
+                  <div class="stock-name-expanded">Alphabet Inc.</div>
+                  <div>
+                    <div class="price">$711.84</div>
+                    <div class="percentage-change">▲0.87%</div>
+                  </div>
+                </div>
+                <div class="actual-graph"><img class="graph-img" src="images/graph v2.jpg" width="385">
+                </div>
+              </div>
+              <div class="right-column w-col w-col-3">
+                <div class="stock-info">
+                  <div class="stat-label">REVENUE</div>
+                  <div class="actual-stat">74.98bn</div>
+                </div>
+                <div class="stock-info">
+                  <div class="stat-label">MARKET CAP</div>
+                  <div class="actual-stat">500.51bn</div>
+                </div>
+                <div class="stock-info">
+                  <div class="stat-label">P/E RATIO</div>
+                  <div class="actual-stat">30.51</div>
+                </div>
+                <div class="stock-info">
+                  <div class="stat-label">VOLUME</div>
+                  <div class="actual-stat">502287</div>
+                </div>
+                <div class="stock-info">
+                  <div class="stat-label">avg VOLUME</div>
+                  <div class="actual-stat">1.7m</div>
+                </div>
+              </div>
+            </div>
+            <div class="btn-row w-row">
+              <div class="w-col w-col-6"><a class="bet-btn" href="#">goes up!</a>
+                <div class="people-prediction">
+                  <div class="predictions stat-label">people predicting up</div>
+                  <div class="actual-stat">2,998</div>
+                </div>
+              </div>
+              <div class="bet-down-column w-col w-col-6"><a class="bet-btn bet-down" href="#">GOes down!</a>
+                <div class="bet-down-stat people-prediction">
+                  <div class="predictions stat-label">people predicting DOWN</div>
+                  <div class="actual-stat bet-down-stat">1,172</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="card-column w-col w-col-6">
-        <div class="stock-card">
-          <div class="card-top-row w-row">
-            <div class="left-column w-col w-col-9">
-              <div class="card-title-container">
-                <div class="stock-name">GOOG</div>
-                <div class="stock-name-expanded">Alphabet Inc.</div>
-                <div>
-                  <div class="price">$711.84</div>
-                  <div class="percentage-change">▲0.87%</div>
-                </div>
-              </div>
-              <div class="actual-graph"><img class="graph-img" src="images/graph v2.jpg" width="385">
-              </div>
-            </div>
-            <div class="right-column w-col w-col-3">
-              <div class="stock-info">
-                <div class="stat-label">REVENUE</div>
-                <div class="actual-stat">74.98bn</div>
-              </div>
-              <div class="stock-info">
-                <div class="stat-label">MARKET CAP</div>
-                <div class="actual-stat">500.51bn</div>
-              </div>
-              <div class="stock-info">
-                <div class="stat-label">P/E RATIO</div>
-                <div class="actual-stat">30.51</div>
-              </div>
-              <div class="stock-info">
-                <div class="stat-label">VOLUME</div>
-                <div class="actual-stat">502287</div>
-              </div>
-              <div class="stock-info">
-                <div class="stat-label">avg VOLUME</div>
-                <div class="actual-stat">1.7m</div>
-              </div>
-            </div>
-          </div>
-          <div class="btn-row w-row">
-            <div class="w-col w-col-6"><a class="bet-btn" href="#">goes up!</a>
-              <div class="people-prediction">
-                <div class="predictions stat-label">people predicting up</div>
-                <div class="actual-stat">2,998</div>
-              </div>
-            </div>
-            <div class="bet-down-column w-col w-col-6"><a class="bet-btn bet-down" href="#">GOes down!</a>
-              <div class="bet-down-stat people-prediction">
-                <div class="predictions stat-label">people predicting DOWN</div>
-                <div class="actual-stat bet-down-stat">1,172</div>
-              </div>
-            </div>
-          </div>
-        </div>
+    </div>
+    <div class="next-section-button"></div>
+  </div>
+  <div class="feature-section w-clearfix w-section">
+    <div class="small-intro-container">
+      <div class="small-intro">You shouldn't need thousands of dollars to trade.</div>
+    </div>
+    <div class="explanation-text">Unfortunately, it's extremely difficult for people to get decent returns on the stock market without a significant amount of capital. Here at guap, we wanted to <span>find </span>a way for ordinary people to be able to start learning and earning on the stock market.
+      <br>
+      <br>We've created a simple, secure platform where you can predict whether a stock will go up or down and put a few bucks on your prediction.
+      <br>
+      <br>If you predict correctly, you win your initial deposit back as well as a portion of the losers' pool, based on how much money you initially invested. Instead of measly +3% gains, you could be making over 50% in returns on a single investment.
+      <br>
+      <br>Stock market immersion, social competition and high returns. What more could you want?</div>
+  </div>
+  <div class="bottom-section w-section">
+    <div class="contact-us-icons"></div>
+    <div class="facebook-icon"></div>
+    <div class="bottom-container w-row">
+      <div class="w-col w-col-2">
+        <div class="copyright">Copyright © 2016
+          <br>guap.
+          <br>website is a WIP :)</div>
+      </div>
+      <div class="w-col w-col-6"></div>
+      <div class="w-col w-col-1">
+        <a class="w-inline-block" href="http://facebook.com/guapstock" target="_blank"><img class="fb-icon" height="50" src="images/facebook-logn-shadow.png" width="50">
+        </a>
+      </div>
+      <div class="w-col w-col-1">
+        <a class="w-inline-block" href="http://twitter.com/guapstock" target="_blank"><img class="twitter-icon" height="62" src="images/twitter-icon.png" width="62">
+        </a>
+      </div>
+      <div class="w-col w-col-1">
+        <a class="w-inline-block" href="http://instagram.com/guapstock" target="_blank"><img class="instagram-icon" src="images/instagram.png" width="50">
+        </a>
+      </div>
+      <div class="w-col w-col-1">
+        <a class="w-inline-block" href="mailto:guapstock@gmail.com?subject=I&#39;m%20interested!"><img class="email-icon" src="images/email-icon.jpg" width="60">
+        </a>
       </div>
     </div>
   </div>
