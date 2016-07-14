@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created in Webflow. http://www.webflow.com-->
-<!-- Last Published: Wed Jul 13 2016 20:41:54 GMT+0000 (UTC) -->
+<!-- Last Published: Thu Jul 14 2016 16:38:27 GMT+0000 (UTC) -->
 <html data-wf-site="5784f2965ff1ffc12fe72539" data-wf-page="5784f2965ff1ffc12fe72538">
 <head>
   <meta charset="utf-8">
@@ -19,14 +19,29 @@
     });
   </script>
   <script type="text/javascript" src="js/modernizr.js"></script>
-  <link rel="shortcut icon" type="image/x-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico">
-  <link rel="apple-touch-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png">
+  <link rel="shortcut icon" type="image/x-icon" href="images/icon.png">
+  <link rel="apple-touch-icon" href="images/webclip.png">
   <style>
+    @-webkit-keyframes animatedBackground {
+    	from { background-position: 0% 0%; }
+    	to { background-position: 100% 100%; }
+    }
+    @-moz-keyframes animatedBackground{
+    	from { background-position: 0% 0%; }
+    	to { background-position: 100% 100%; }
+    }
+    @-o-keyframes animatedBackground{
+    	from { background-position: 0% 0%; }
+    	to { background-position: 100% 100%; }
+    }
     @keyframes animatedBackground {
     	from { background-position: 0% 0%; }
     	to { background-position: 100% 100%; }
     }
     .hero-section {
+      -webkit-animation: animatedBackground 100s-linear infinite;
+      -moz-animation: animatedBackground 100s-linear infinite;
+      -o-animation: animatedBackground 100s-linear infinite;
     	animation: animatedBackground 100s linear infinite;
     }
   </style>
@@ -124,19 +139,20 @@
         </div>
       </div>
     </div>
-    <div class="next-section-button"></div>
+    <a class="next-section-button w-inline-block" href="#Section-2"><img src="images/icon (1).png" width="75">
+    </a>
   </div>
-  <div class="feature-section w-clearfix w-section">
-    <div class="small-intro-container">
+  <div class="feature-section w-section" id="Section-2">
+    <div class="small-intro-container w-clearfix">
       <div class="small-intro">You shouldn't need thousands of dollars to trade.</div>
+      <div class="explanation-text">Unfortunately, it's extremely difficult for people to get decent returns on the stock market without a significant amount of capital. Here at guap, we wanted to <span>find </span>a way for ordinary people to be able to start learning and earning on the stock market.
+        <br>
+        <br>We've created a simple, secure platform where you can predict whether a stock will go up or down and put a few bucks on your prediction.
+        <br>
+        <br>If you predict correctly, you win your initial deposit back as well as a portion of the losers' pool, based on how much money you initially invested. Instead of measly +3% gains, you could be making over 50% in returns on a single investment.
+        <br>
+        <br>Stock market immersion, social competition and high returns. What more could you want?</div>
     </div>
-    <div class="explanation-text">Unfortunately, it's extremely difficult for people to get decent returns on the stock market without a significant amount of capital. Here at guap, we wanted to <span>find </span>a way for ordinary people to be able to start learning and earning on the stock market.
-      <br>
-      <br>We've created a simple, secure platform where you can predict whether a stock will go up or down and put a few bucks on your prediction.
-      <br>
-      <br>If you predict correctly, you win your initial deposit back as well as a portion of the losers' pool, based on how much money you initially invested. Instead of measly +3% gains, you could be making over 50% in returns on a single investment.
-      <br>
-      <br>Stock market immersion, social competition and high returns. What more could you want?</div>
   </div>
   <div class="bottom-section w-section">
     <div class="contact-us-icons"></div>

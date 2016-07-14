@@ -324,7 +324,7 @@ body {
   max-width: 633px;
   margin-top: 35px;
   margin-right: 7px;
-  margin-left: 35%;
+  margin-left: 11%;
   padding-top: 0px;
   padding-right: 0px;
   padding-left: 0px;
@@ -348,7 +348,7 @@ body {
 .next-section-button {
   display: block;
   width: 5%;
-  margin-top: 100px;
+  margin-top: 80px;
   margin-right: auto;
   margin-left: auto;
 }
