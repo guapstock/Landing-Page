@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <!-- This site was created in Webflow. http://www.webflow.com-->
-<!-- Last Published: Thu Jul 14 2016 16:38:27 GMT+0000 (UTC) -->
-<html data-wf-site="5784f2965ff1ffc12fe72539" data-wf-page="5784f2965ff1ffc12fe72538">
+<!-- Last Published: Sun Jul 17 2016 22:59:10 GMT+0000 (UTC) -->
+<html data-wf-site="578837814ab597be57d7900f" data-wf-page="578837814ab597be57d7900e">
 <head>
   <meta charset="utf-8">
-  <title>Guap Stocks</title>
+  <title>guap</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="Webflow">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/webflow.css">
-  <link rel="stylesheet" type="text/css" href="css/guap-launch.webflow.css">
+  <link rel="stylesheet" type="text/css" href="css/guapp.webflow.css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
   <script>
     WebFont.load({
@@ -39,22 +39,23 @@
     	to { background-position: 100% 100%; }
     }
     .hero-section {
-      -webkit-animation: animatedBackground 100s-linear infinite;
-      -moz-animation: animatedBackground 100s-linear infinite;
-      -o-animation: animatedBackground 100s-linear infinite;
-    	animation: animatedBackground 100s linear infinite;
+    	-webkit-animation: animatedBackground 100s infinite linear;
+      -moz-animation:animatedBackground 100s infinite linear;
+      -o-animation: animatedBackground 100s infinite linear;
+      -ms-animation: animatedBackground 100s infinite linear;
+      animation: animatedBackground 100s infinite linear;
     }
   </style>
 </head>
 <body class="body">
-  <div class="hero-section w-section">
-    <div class="navbar w-nav" data-animation="default" data-collapse="medium" data-contain="1" data-duration="400">
+  <div class="hero-section" id="home">
+    <div class="navbar w-nav" data-animation="default" data-collapse="medium" data-contain="1" data-doc-height="1" data-duration="400">
       <div class="navbar-container w-container">
         <a class="company-logo-container w-nav-brand" href="http://guapstock.com"><img class="company-logo" src="images/Guap V3 with border-01.png" width="144">
         </a>
-        <nav class="w-nav-menu" role="navigation"><a class="navbar-button w-nav-link" href="#">COMPANY</a><a class="navbar-button sign-up-btn w-nav-link" href="http://tinyurl.com/guapstock" target="_blank">SIGN UP FOR BETA</a>
+        <nav class="nav-menu w-nav-menu" role="navigation"><a class="navbar-button w-nav-link" href="#">COMPANY</a><a class="navbar-button sign-up-btn w-nav-link" href="http://tinyurl.com/guapstock" target="_blank">SIGN UP FOR BETA</a>
         </nav>
-        <div class="w-nav-button">
+        <div class="mobile-menu-button w-nav-button">
           <div class="w-icon-nav-menu"></div>
         </div>
       </div>
@@ -63,14 +64,14 @@
       <div class="homepage-row w-row">
         <div class="introduction-text w-col w-col-6">
           <div class="introduction-container">
-            <div class="company-name">Guap</div>
+            <div class="company-name w-hidden-medium w-hidden-small w-hidden-tiny">Guap</div>
             <div class="company-desc">Stock market game with real world rewards.
               <br>
               <br>Low entry, high returns. With&nbsp;a side of guap.</div>
             <div class="subtext">We're still in alpha, so join our mailing list for some updates!</div>
             <div class="form-wrapper w-form">
               <form data-name="Email Form" id="email-form" name="email-form">
-                <input class="name-field w-input" data-name="Name" id="name" maxlength="256" name="name" placeholder="Enter your name" type="text">
+                <input class="name-field w-input" data-name="Name" id="name" maxlength="256" name="name" placeholder="Enter your name" required="required" type="text">
                 <input class="email-field w-input" data-name="Email" id="email" maxlength="256" name="email" placeholder="Enter your email address" required="required" type="email">
                 <input class="submit-button w-button" data-wait="Please wait..." type="submit" value="keep me posted!">
               </form>
@@ -85,42 +86,31 @@
         </div>
         <div class="card-column w-col w-col-6">
           <div class="stock-card">
-            <div class="card-top-row w-row">
-              <div class="left-column w-col w-col-9">
-                <div class="card-title-container">
-                  <div class="stock-name">GOOG</div>
-                  <div class="stock-name-expanded">Alphabet Inc.</div>
-                  <div>
-                    <div class="price">$711.84</div>
-                    <div class="percentage-change">▲0.87%</div>
-                  </div>
-                </div>
-                <div class="actual-graph"><img class="graph-img" src="images/graph v2.jpg" width="385">
-                </div>
-              </div>
-              <div class="right-column w-col w-col-3">
-                <div class="stock-info">
-                  <div class="stat-label">REVENUE</div>
-                  <div class="actual-stat">74.98bn</div>
-                </div>
-                <div class="stock-info">
-                  <div class="stat-label">MARKET CAP</div>
-                  <div class="actual-stat">500.51bn</div>
-                </div>
-                <div class="stock-info">
-                  <div class="stat-label">P/E RATIO</div>
-                  <div class="actual-stat">30.51</div>
-                </div>
-                <div class="stock-info">
-                  <div class="stat-label">VOLUME</div>
-                  <div class="actual-stat">502287</div>
-                </div>
-                <div class="stock-info">
-                  <div class="stat-label">avg VOLUME</div>
-                  <div class="actual-stat">1.7m</div>
-                </div>
-              </div>
-            </div>
+            <div class="stock-graph w-embed w-hidden-small w-hidden-tiny w-script">
+              <!-- TradingView Widget BEGIN -->
+              <div id="tv-medium-widget-70352"></div>
+              <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+              <script type="text/javascript">
+                new TradingView.MediumWidget({
+                  "container_id": "tv-medium-widget-70352",
+                  "symbols": [
+                    [
+                      "Apple Inc.",
+                      "AAPL"
+                    ]
+                  ],
+                  "gridLineColor": "#E9E9EA",
+                  "fontColor": "#83888D",
+                  "underLineColor": "rgba(255, 255, 255, 1)",
+                  "trendLineColor": "rgba(106, 168, 79, 1)",
+                  "width": "515px",
+                  "height": "450px",
+                  "tradeItWidget": false,
+                  "locale": "en"
+                });
+              </script>
+              <!-- TradingView Widget END -->
+            </div><img class="static-graph w-hidden-main" src="images/static_line_chart.PNG" width="267">
             <div class="btn-row w-row">
               <div class="w-col w-col-6"><a class="bet-btn" href="#">goes up!</a>
                 <div class="people-prediction">
@@ -139,10 +129,10 @@
         </div>
       </div>
     </div>
-    <a class="next-section-button w-inline-block" href="#Section-2"><img src="images/icon (1).png" width="75">
+    <a class="next-section-button w-hidden-medium w-hidden-small w-hidden-tiny w-inline-block" href="#about"><img src="images/icon (1).png" width="75">
     </a>
   </div>
-  <div class="feature-section w-section" id="Section-2">
+  <div class="feature-section" id="about">
     <div class="small-intro-container w-clearfix">
       <div class="small-intro">You shouldn't need thousands of dollars to trade.</div>
       <div class="explanation-text">Unfortunately, it's extremely difficult for people to get decent returns on the stock market without a significant amount of capital. Here at guap, we wanted to <span>find </span>a way for ordinary people to be able to start learning and earning on the stock market.
@@ -154,29 +144,37 @@
         <br>Stock market immersion, social competition and high returns. What more could you want?</div>
     </div>
   </div>
-  <div class="bottom-section w-section">
+  <div class="what-we-offer-section">
+    <div class="w-row what-we-offer">
+      <div class="w-col w-col-4"></div>
+      <div class="w-col w-col-4"></div>
+      <div class="w-col w-col-4"></div>
+    </div>
+    <div class="third-section-title"></div>
+  </div>
+  <div class="bottom-section">
     <div class="contact-us-icons"></div>
     <div class="facebook-icon"></div>
     <div class="bottom-container w-row">
-      <div class="w-col w-col-2">
+      <div class="w-col w-col-2 w-col-tiny-4">
         <div class="copyright">Copyright © 2016
           <br>guap.
           <br>website is a WIP :)</div>
       </div>
-      <div class="w-col w-col-6"></div>
-      <div class="w-col w-col-1">
+      <div class="w-col w-col-6 w-col-tiny-4"></div>
+      <div class="w-col w-col-1 w-col-tiny-4 w-hidden-medium w-hidden-small w-hidden-tiny">
         <a class="w-inline-block" href="http://facebook.com/guapstock" target="_blank"><img class="fb-icon" height="50" src="images/facebook-logn-shadow.png" width="50">
         </a>
       </div>
-      <div class="w-col w-col-1">
+      <div class="w-col w-col-1 w-col-tiny-4 w-hidden-medium w-hidden-small w-hidden-tiny">
         <a class="w-inline-block" href="http://twitter.com/guapstock" target="_blank"><img class="twitter-icon" height="62" src="images/twitter-icon.png" width="62">
         </a>
       </div>
-      <div class="w-col w-col-1">
+      <div class="w-col w-col-1 w-col-tiny-4 w-hidden-medium w-hidden-small w-hidden-tiny">
         <a class="w-inline-block" href="http://instagram.com/guapstock" target="_blank"><img class="instagram-icon" src="images/instagram.png" width="50">
         </a>
       </div>
-      <div class="w-col w-col-1">
+      <div class="w-col w-col-1 w-col-tiny-4 w-hidden-medium w-hidden-small w-hidden-tiny">
         <a class="w-inline-block" href="mailto:guapstock@gmail.com?subject=I&#39;m%20interested!"><img class="email-icon" src="images/email-icon.jpg" width="60">
         </a>
       </div>
