@@ -6,11 +6,16 @@ body {
 
 .stock-card {
   position: static;
-  max-width: 800px;
-  margin-right: auto;
-  margin-left: auto;
+  left: 30%;
+  top: 30%;
+  max-width: 960px;
+  min-width: 470px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
   padding: 25px 30px;
   border: 1px solid #f1f1f1;
+  border-radius: 5px;
   background-color: #fff;
   box-shadow: 0 20px 60px 0 rgba(0, 0, 0, .1);
   font-size: 14px;
@@ -138,7 +143,7 @@ body {
 }
 
 .homepage-row {
-  padding-top: 103px;
+  padding-top: 75px;
 }
 
 .introduction-container {
@@ -183,17 +188,22 @@ body {
 .submit-button {
   display: block;
   margin-top: 27px;
-  margin-right: auto;
-  margin-left: auto;
   padding: 15px 30px;
   border-radius: 5px;
   background-color: #d6d962;
+  -webkit-transition: all 150ms ease;
+  transition: all 150ms ease;
   font-family: Roboto, sans-serif;
   color: #fff;
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+}
+
+.submit-button:hover {
+  background-color: #c3c55b;
+  color: #fff;
 }
 
 .name-field {
@@ -257,7 +267,7 @@ body {
   display: block;
   max-width: 700px;
   margin: 0px auto;
-  padding-top: 125px;
+  padding-top: 126px;
   font-family: Roboto, sans-serif;
   color: #fff;
   font-size: 39.5px;
@@ -290,10 +300,17 @@ body {
 
 .next-section-button {
   display: block;
-  width: 5%;
+  width: auto;
+  max-width: 36px;
   margin-top: 65px;
   margin-right: auto;
   margin-left: auto;
+  opacity: 0.55;
+}
+
+.next-section-button.w--current {
+  margin-bottom: 16px;
+  opacity: 0.5;
 }
 
 .bottom-section {
@@ -323,9 +340,13 @@ body {
 }
 
 .fb-icon {
+  position: absolute;
+  bottom: -49px;
   display: block;
-  width: 50px;
-  margin-top: 14px;
+  width: auto;
+  margin-top: 12px;
+  margin-right: 15px;
+  padding-right: 0px;
 }
 
 .copyright {
@@ -343,7 +364,10 @@ body {
 }
 
 .twitter-icon {
-  margin-top: 9px;
+  position: absolute;
+  bottom: -46px;
+  margin-top: 16px;
+  margin-left: 4px;
 }
 
 .bottom-container {
@@ -354,21 +378,15 @@ body {
 }
 
 .instagram-icon {
-  margin-top: 12px;
-  margin-left: 9px;
+  position: absolute;
+  margin-top: 7px;
+  margin-left: 3px;
 }
 
 .email-icon {
+  position: absolute;
   margin-top: 7px;
   margin-left: 2px;
-}
-
-.guap-avocado {
-  display: block;
-  max-width: 18%;
-  margin-top: 0px;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .login-box {
@@ -470,6 +488,221 @@ body {
 
 .buttom-section-large-margin {
   margin-top: 261px;
+}
+
+.header-div {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  z-index: 3;
+  display: block;
+  height: 100px;
+  padding-top: 16px;
+  padding-bottom: 10px;
+  background-color: #fff;
+  text-align: right;
+}
+
+.top-left-logo {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  float: left;
+}
+
+.search-box {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  display: inline-block;
+  width: 185px;
+  max-width: 300px;
+  margin: 15px auto 0px;
+  padding: 4px 0px 0px 6px;
+  float: none;
+  clear: none;
+  border-style: none none solid;
+  border-color: rgba(0, 0, 0, .34);
+  border-bottom-width: 1px;
+  background-color: transparent;
+  font-family: Roboto, sans-serif;
+  font-size: 15px;
+}
+
+.search-form {
+  position: relative;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: inline-block;
+  width: auto;
+  max-width: 300px;
+  margin-left: 0px;
+}
+
+.search-bar-wrapper {
+  display: inline-block;
+  margin-top: 0px;
+  margin-right: 20px;
+  margin-bottom: 0px;
+  float: none;
+}
+
+.left-nav-bar {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  bottom: 35px;
+  overflow: hidden;
+  width: 220px;
+  height: 100%;
+  padding-top: 296px;
+  padding-left: 0px;
+  background-color: #568a3e;
+  text-align: center;
+}
+
+.dashboard-section {
+  overflow: hidden;
+  background-color: #f2f2f2;
+  font-family: Roboto, sans-serif;
+}
+
+.profile-image {
+  position: relative;
+  margin-top: 15px;
+  margin-right: 9px;
+  margin-left: 32px;
+  padding-right: 0px;
+  padding-left: 0px;
+  float: right;
+  border-radius: 50%;
+}
+
+.stocks-button {
+  position: static;
+  left: 62px;
+  display: block;
+  max-width: 212px;
+  margin-top: 2px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-style: none;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.left-navbar-list {
+  position: relative;
+  left: 0px;
+  display: block;
+  overflow: hidden;
+  width: auto;
+  margin: 0px auto 0px 44px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  text-align: left;
+}
+
+.wallet-button {
+  margin-top: 0px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.leaderboard-button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+.settings-button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: left;
+}
+
+.stocks-link {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: Roboto, sans-serif;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: left;
+  text-decoration: none;
+}
+
+.wallet-link {
+  display: block;
+  font-family: Roboto, sans-serif;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: left;
+  text-decoration: none;
+}
+
+.leaders-button {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-family: Roboto, sans-serif;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: left;
+  text-decoration: none;
+}
+
+.settings-link {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-family: Roboto, sans-serif;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  text-align: left;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 220px;
+  height: 100vh;
+  max-width: 220px;
+  padding-top: 100px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #568a3e;
+}
+
+.has-left-sidebar {
+  padding-top: 100px;
+  padding-left: 220px;
+  background-color: #f2f2f2;
+}
+
+.page-title {
+  margin-top: 45px;
+  margin-left: 45px;
+  font-family: Roboto, sans-serif;
+  font-size: 33.5px;
+  font-weight: 300;
 }
 
 @media (max-width: 991px) {
