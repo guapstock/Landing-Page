@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created in Webflow. http://www.webflow.com-->
-<!-- Last Published: Wed Jul 20 2016 04:46:07 GMT+0000 (UTC) -->
+<!-- Last Published: Wed Jul 20 2016 06:26:39 GMT+0000 (UTC) -->
 <html data-wf-site="578837814ab597be57d7900f" data-wf-page="5789340c88d369f92a51d762">
 <head>
   <meta charset="utf-8">
@@ -24,6 +24,47 @@
   <link rel="apple-touch-icon" href="images/webclip.png">
 </head>
 <body>
+  <div class="stock-card">
+    <div class="stock-graph2 w-embed w-hidden-small w-hidden-tiny w-script">
+      <!-- TradingView Widget BEGIN -->
+      <div id="tv-medium-widget-70352"></div>
+      <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+      <script type="text/javascript">
+        new TradingView.MediumWidget({
+          "container_id": "tv-medium-widget-70352",
+          "symbols": [
+            [
+              "Alphabet Inc",
+              "GOOG"
+            ]
+          ],
+          "gridLineColor": "#E9E9EA",
+          "fontColor": "#83888D",
+          "underLineColor": "rgba(255, 255, 255, 1)",
+          "trendLineColor": "rgba(106, 168, 79, 1)",
+          "width": "840px",
+          "height": "360px",
+          "tradeItWidget": false,
+          "locale": "en"
+        });
+      </script>
+      <!-- TradingView Widget END -->
+    </div><img class="static-graph w-hidden-main" src="images/static_line_chart.PNG" width="267">
+    <div class="btn-row w-row">
+      <div class="bet-up-column w-col w-col-6"><a class="bet-btn" href="#">goes up!</a>
+        <div class="people-prediction">
+          <div class="predictions stat-label">people predicting up</div>
+          <div class="actual-stat">2,998</div>
+        </div>
+      </div>
+      <div class="bet-down-column w-col w-col-6"><a class="bet-btn bet-down" href="#">GOes down!</a>
+        <div class="bet-down-stat people-prediction">
+          <div class="predictions stat-label">people predicting DOWN</div>
+          <div class="actual-stat bet-down-stat">1,172</div>
+        </div>
+      </div>
+    </div>
+  </div>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script type="text/javascript" src="js/webflow.js"></script>
   <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->

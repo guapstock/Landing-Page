@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created in Webflow. http://www.webflow.com-->
-<!-- Last Published: Wed Jul 20 2016 04:46:07 GMT+0000 (UTC) -->
+<!-- Last Published: Wed Jul 20 2016 06:26:39 GMT+0000 (UTC) -->
 <html data-wf-site="578837814ab597be57d7900f" data-wf-page="578c190718f10cd163ae538a">
 <head>
   <meta charset="utf-8">
@@ -38,7 +38,6 @@
     </div>
   </div>
   <div class="container">
-    <div class="tab-title" data-ix="change">Stocks</div>
     <div class="w-tabs" data-duration-in="300" data-duration-out="100">
       <div class="navbar-menu w-tab-menu">
         <a class="navbar-tab-style w-inline-block w-tab-link" data-w-tab="Tab 1">
@@ -47,7 +46,7 @@
         <a class="navbar-tab-style w--current w-inline-block w-tab-link" data-ix="change" data-w-tab="Tab 2">
           <div>Wallet</div>
         </a>
-        <a class="navbar-tab-style w-inline-block w-tab-link" data-w-tab="Tab 3">
+        <a class="navbar-tab-style w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny w-inline-block w-tab-link" data-w-tab="Tab 3">
           <div>Leaderboard</div>
         </a>
         <a class="navbar-tab-style w-inline-block w-tab-link" data-w-tab="Tab 4">
@@ -78,8 +77,8 @@
                           "fontColor": "#83888D",
                           "underLineColor": "rgba(255, 255, 255, 1)",
                           "trendLineColor": "rgba(106, 168, 79, 1)",
-                          "width": "880px",
-                          "height": "385px",
+                          "width": "840px",
+                          "height": "360px",
                           "tradeItWidget": false,
                           "locale": "en"
                         });
@@ -105,7 +104,7 @@
                           "fontColor": "#83888D",
                           "underLineColor": "rgba(255, 255, 255, 1)",
                           "trendLineColor": "rgba(106, 168, 79, 1)",
-                          "width": "880px",
+                          "width": "840px",
                           "height": "370px",
                           "tradeItWidget": false,
                           "locale": "en"
@@ -141,8 +140,8 @@
           </div>
         </div>
         <div class="w--tab-active w-tab-pane" data-w-tab="Tab 2">
-          <div class="balance-header">Balance &amp; Payment</div>
           <div class="balance-container">
+            <div class="balance-header">Balance &amp; Payment</div>
             <div class="balance-row w-row">
               <div class="w-col w-col-6">
                 <div class="balance-value">$50.67</div>
@@ -156,7 +155,26 @@
                 <div class="example-card">KAT WICKS xxxx9471 - MASTERCARD DEBIT</div>
                 <div class="example-card">KAT WICKS xxxx3934 - VISA CREDIT</div>
               </div>
-              <div class="deposit-withdraw-buttons w-col w-col-6"><a class="add-a-card-btn w-button" href="#">add a card</a><a class="deposit-button w-button" href="#">Deposit</a><a class="deposit-button w-button" href="#">Withdraw</a>
+              <div class="deposit-withdraw-buttons w-col w-col-6"><a class="add-a-card-btn w-button" href="#">add a card</a><a class="deposit-button w-button" href="#">Deposit</a><a class="deposit-button w-button withdraw-button" href="#">Withdraw</a>
+              </div>
+            </div>
+          </div>
+          <div class="balance-container">
+            <div class="balance-header">Trading Overview</div>
+            <div>
+              <div>
+                <div class="trade-overview-row w-row">
+                  <div class="w-col w-col-4">
+                    <div class="number-of-trades">
+                      <div class="number-of-trades-lbl">Best Trade: $4.00 on GOOG</div>
+                    </div>
+                    <div class="biggest-trade">
+                      <div class="biggest-trade-lbl"># of trades:</div>
+                      <div class="number-of-trades-stat">30</div>
+                    </div>
+                  </div>
+                  <div class="w-col w-col-8"></div>
+                </div>
               </div>
             </div>
           </div>

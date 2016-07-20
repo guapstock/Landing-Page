@@ -9,8 +9,8 @@ body {
   left: 30%;
   top: 30%;
   display: block;
-  max-width: 960px;
-  margin-top: 40px;
+  max-width: 920px;
+  margin-top: 0px;
   margin-right: auto;
   margin-left: auto;
   padding: 25px 40px;
@@ -573,7 +573,7 @@ body {
 }
 
 .has-left-sidebar {
-  padding-top: 100px;
+  padding-top: 75px;
   background-color: #f2f2f2;
 }
 
@@ -590,6 +590,8 @@ body {
 }
 
 .navbar-menu {
+  position: relative;
+  margin-top: 0px;
   border-width: 2px;
   border-color: rgba(0, 0, 0, .06);
   border-bottom-style: solid;
@@ -624,7 +626,7 @@ body {
 }
 
 .stocks-pane {
-  padding: 30px 60px 60px;
+  padding: 0px 60px 60px;
 }
 
 .logout-icon {
@@ -634,13 +636,17 @@ body {
 }
 
 .slider {
-  height: 385px;
+  height: 360px;
 }
 
 .balance-header {
   font-family: Roboto, sans-serif;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 400;
+}
+
+.balance-container {
+  padding-top: 33px;
 }
 
 .balance-value {
@@ -648,7 +654,7 @@ body {
   margin-left: 0px;
   font-family: Roboto, sans-serif;
   color: #568a3e;
-  font-size: 45px;
+  font-size: 36px;
   font-weight: 500;
 }
 
@@ -657,12 +663,12 @@ body {
 }
 
 .balance-row {
-  margin-top: 10px;
+  margin-top: 5px;
   margin-left: 120px;
 }
 
 .payment-row {
-  margin-top: 59px;
+  margin-top: 10px;
   margin-left: 120px;
   border-style: none;
   border-right-width: 1px;
@@ -670,15 +676,14 @@ body {
 }
 
 .existing-cards {
-  padding-top: 20px;
-  padding-right: 30px;
-  padding-bottom: 20px;
-  border-right: 1px solid rgba(0, 0, 0, .34);
+  padding-top: 30px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  border-right: 1px none rgba(0, 0, 0, .34);
 }
 
 .deposit-withdraw-buttons {
-  padding-top: 20px;
-  padding-right: 30px;
+  padding: 30px 20px 10px;
   text-align: center;
 }
 
@@ -686,24 +691,30 @@ body {
   margin-top: 5px;
   margin-bottom: 5px;
   padding: 17px;
-  background-color: #e4e4e4;
+  background-color: hsla(0, 0%, 89%, 0);
   font-family: Roboto, sans-serif;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .deposit-button {
   display: inline-block;
-  margin-top: 15px;
-  margin-right: 5px;
-  margin-bottom: 15px;
-  padding: 9px 73px;
+  margin: 15px 10px 15px 0px;
+  padding: 9px 78px;
   border: 1px solid #00c853;
   border-radius: 5px;
   background-color: hsla(0, 0%, 100%, 0);
   font-family: Roboto, sans-serif;
   color: #00c853;
   font-weight: 700;
+  text-align: left;
   text-transform: uppercase;
+}
+
+.deposit-button.withdraw-button {
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-right: 68px;
+  padding-left: 68px;
 }
 
 .add-a-card-btn {
@@ -716,6 +727,29 @@ body {
   color: #00c853;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.trade-overview-row {
+  margin-top: 35px;
+  margin-left: 120px;
+  padding-top: 0px;
+}
+
+.biggest-trade-lbl {
+  display: inline-block;
+}
+
+.biggest-trade {
+  font-family: Roboto, sans-serif;
+}
+
+.number-of-trades-lbl {
+  font-family: Roboto, sans-serif;
+}
+
+.number-of-trades-stat {
+  display: inline-block;
+  margin-left: 8px;
 }
 
 @media (max-width: 991px) {
