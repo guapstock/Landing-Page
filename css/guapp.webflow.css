@@ -8,16 +8,18 @@ body {
   position: static;
   left: 30%;
   top: 30%;
+  display: block;
   max-width: 960px;
-  min-width: 470px;
-  margin-top: 0px;
-  margin-right: 0px;
-  margin-left: 0px;
-  padding: 25px 30px;
-  border: 1px solid #f1f1f1;
+  margin-top: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 25px 40px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, .16);
   border-radius: 5px;
   background-color: #fff;
-  box-shadow: 0 20px 60px 0 rgba(0, 0, 0, .1);
+  box-shadow: 0 5px 14px 0 rgba(0, 0, 0, .16);
   font-size: 14px;
 }
 
@@ -78,6 +80,7 @@ body {
 }
 
 .bet-down-column {
+  padding-right: 0px;
   padding-left: 0px;
   text-align: right;
 }
@@ -138,12 +141,14 @@ body {
 .container {
   display: block;
   max-width: 1200px;
+  margin-top: 25px;
   margin-right: auto;
   margin-left: auto;
+  padding: 0px;
 }
 
 .homepage-row {
-  padding-top: 75px;
+  padding-top: 60px;
 }
 
 .introduction-container {
@@ -302,9 +307,7 @@ body {
   display: block;
   width: auto;
   max-width: 36px;
-  margin-top: 65px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 70px auto 15px;
   opacity: 0.55;
 }
 
@@ -457,6 +460,12 @@ body {
   padding-top: 0px;
 }
 
+.stock-graph {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .login-logo {
   display: block;
   margin: 0px auto 23px;
@@ -497,18 +506,21 @@ body {
   right: 0px;
   z-index: 3;
   display: block;
-  height: 100px;
+  height: 75px;
+  margin-bottom: 0px;
   padding-top: 16px;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
   background-color: #fff;
   text-align: right;
 }
 
 .top-left-logo {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   margin-left: 20px;
+  padding-bottom: 0px;
   float: left;
+  text-align: right;
 }
 
 .search-box {
@@ -518,7 +530,7 @@ body {
   display: inline-block;
   width: 185px;
   max-width: 300px;
-  margin: 15px auto 0px;
+  margin: 5px auto 0px;
   padding: 4px 0px 0px 6px;
   float: none;
   clear: none;
@@ -531,7 +543,7 @@ body {
 }
 
 .search-form {
-  position: relative;
+  position: static;
   top: 0px;
   right: 0px;
   bottom: 0px;
@@ -549,29 +561,9 @@ body {
   float: none;
 }
 
-.left-nav-bar {
-  position: relative;
-  left: 0px;
-  top: 0px;
-  bottom: 35px;
-  overflow: hidden;
-  width: 220px;
-  height: 100%;
-  padding-top: 296px;
-  padding-left: 0px;
-  background-color: #568a3e;
-  text-align: center;
-}
-
-.dashboard-section {
-  overflow: hidden;
-  background-color: #f2f2f2;
-  font-family: Roboto, sans-serif;
-}
-
 .profile-image {
   position: relative;
-  margin-top: 15px;
+  margin-top: 5px;
   margin-right: 9px;
   margin-left: 32px;
   padding-right: 0px;
@@ -580,129 +572,150 @@ body {
   border-radius: 50%;
 }
 
-.stocks-button {
-  position: static;
-  left: 62px;
-  display: block;
-  max-width: 212px;
-  margin-top: 2px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  border-style: none;
-  color: #fff;
-  font-size: 14px;
-  text-decoration: none;
-}
-
-.left-navbar-list {
-  position: relative;
-  left: 0px;
-  display: block;
-  overflow: hidden;
-  width: auto;
-  margin: 0px auto 0px 44px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  text-align: left;
-}
-
-.wallet-button {
-  margin-top: 0px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-}
-
-.leaderboard-button {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  text-align: center;
-}
-
-.settings-button {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  text-align: left;
-}
-
-.stocks-link {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  font-family: Roboto, sans-serif;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 300;
-  text-align: left;
-  text-decoration: none;
-}
-
-.wallet-link {
-  display: block;
-  font-family: Roboto, sans-serif;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 300;
-  text-align: left;
-  text-decoration: none;
-}
-
-.leaders-button {
-  padding-top: 0px;
-  padding-bottom: 0px;
-  font-family: Roboto, sans-serif;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 300;
-  text-align: left;
-  text-decoration: none;
-}
-
-.settings-link {
-  padding-top: 0px;
-  padding-bottom: 0px;
-  font-family: Roboto, sans-serif;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 300;
-  text-align: left;
-  text-decoration: none;
-  text-transform: none;
-}
-
-.sidebar {
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 220px;
-  height: 100vh;
-  max-width: 220px;
-  padding-top: 100px;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #568a3e;
-}
-
 .has-left-sidebar {
   padding-top: 100px;
-  padding-left: 220px;
   background-color: #f2f2f2;
 }
 
-.page-title {
-  margin-top: 45px;
-  margin-left: 45px;
+.stock-card-container {
+  display: block;
+  max-width: 1100px;
+  margin-top: 34px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.bet-up-column {
+  padding-left: 0px;
+}
+
+.navbar-menu {
+  border-width: 2px;
+  border-color: rgba(0, 0, 0, .06);
+  border-bottom-style: solid;
+}
+
+.tab-title {
+  margin-bottom: 30px;
   font-family: Roboto, sans-serif;
-  font-size: 33.5px;
+  font-size: 32px;
   font-weight: 300;
+}
+
+.navbar-tab-style {
+  margin-right: 25px;
+  padding: 15px 8px;
+  background-color: hsla(0, 0%, 87%, 0);
+  font-family: Roboto, sans-serif;
+}
+
+.navbar-tab-style:hover {
+  border-bottom: 2px solid #568a3e;
+}
+
+.navbar-tab-style.w--current {
+  margin-top: 0px;
+  margin-right: 25px;
+  padding: 15px 8px;
+  border-style: none none solid;
+  border-width: 2px;
+  border-color: #568a3e;
+  background-color: hsla(0, 0%, 78%, 0);
+}
+
+.stocks-pane {
+  padding: 30px 60px 60px;
+}
+
+.logout-icon {
+  margin-top: 10px;
+  margin-left: 35px;
+  opacity: 0.42;
+}
+
+.slider {
+  height: 385px;
+}
+
+.balance-header {
+  font-family: Roboto, sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.balance-value {
+  margin-top: 35px;
+  margin-left: 0px;
+  font-family: Roboto, sans-serif;
+  color: #568a3e;
+  font-size: 45px;
+  font-weight: 500;
+}
+
+.balance-value.token-value {
+  color: rgba(0, 0, 0, .7);
+}
+
+.balance-row {
+  margin-top: 10px;
+  margin-left: 120px;
+}
+
+.payment-row {
+  margin-top: 59px;
+  margin-left: 120px;
+  border-style: none;
+  border-right-width: 1px;
+  border-right-color: #000;
+}
+
+.existing-cards {
+  padding-top: 20px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  border-right: 1px solid rgba(0, 0, 0, .34);
+}
+
+.deposit-withdraw-buttons {
+  padding-top: 20px;
+  padding-right: 30px;
+  text-align: center;
+}
+
+.example-card {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 17px;
+  background-color: #e4e4e4;
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+}
+
+.deposit-button {
+  display: inline-block;
+  margin-top: 15px;
+  margin-right: 5px;
+  margin-bottom: 15px;
+  padding: 9px 73px;
+  border: 1px solid #00c853;
+  border-radius: 5px;
+  background-color: hsla(0, 0%, 100%, 0);
+  font-family: Roboto, sans-serif;
+  color: #00c853;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.add-a-card-btn {
+  display: block;
+  margin-top: 14px;
+  border: 1px solid #00c853;
+  border-radius: 5px;
+  background-color: rgba(56, 152, 236, 0);
+  font-family: Roboto, sans-serif;
+  color: #00c853;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 @media (max-width: 991px) {

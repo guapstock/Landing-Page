@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!-- This site was created in Webflow. http://www.webflow.com-->
+<!-- Last Published: Wed Jul 20 2016 04:46:07 GMT+0000 (UTC) -->
+<html data-wf-site="578837814ab597be57d7900f" data-wf-page="578c190718f10cd163ae538a">
+<head>
+  <meta charset="utf-8">
+  <title>Dashboard</title>
+  <meta property="og:title" content="Dashboard">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Webflow">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/webflow.css">
+  <link rel="stylesheet" type="text/css" href="css/guapp.webflow.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script>
+    WebFont.load({
+      google: {
+        families: ["Roboto:100,100italic,300,300italic,regular,italic,500,700,900"]
+      }
+    });
+  </script>
+  <script type="text/javascript" src="js/modernizr.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="images/icon.png">
+  <link rel="apple-touch-icon" href="images/webclip.png">
+</head>
+<body class="has-left-sidebar">
+  <div class="header-div w-clearfix"><img class="top-left-logo" height="50" src="images/Guap V3 with border-01.png">
+    <div class="search-bar-wrapper w-form">
+      <form class="search-form w-clearfix" data-name="Email Form" id="email-form" name="email-form">
+        <input class="search-box w-input" data-name="Search" id="Search" maxlength="256" name="Search" placeholder="                                          🔍" type="text"><img class="logout-icon" src="images/159707.png" width="31"><img class="profile-image w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny" src="images/blank-profile-picture-973460_1280.png" width="41">
+      </form>
+      <div class="w-form-done">
+        <div>Thank you! Your submission has been received!</div>
+      </div>
+      <div class="w-form-fail">
+        <div>Oops! Something went wrong while submitting the form</div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="tab-title" data-ix="change">Stocks</div>
+    <div class="w-tabs" data-duration-in="300" data-duration-out="100">
+      <div class="navbar-menu w-tab-menu">
+        <a class="navbar-tab-style w-inline-block w-tab-link" data-w-tab="Tab 1">
+          <div>Stocks</div>
+        </a>
+        <a class="navbar-tab-style w--current w-inline-block w-tab-link" data-ix="change" data-w-tab="Tab 2">
+          <div>Wallet</div>
+        </a>
+        <a class="navbar-tab-style w-inline-block w-tab-link" data-w-tab="Tab 3">
+          <div>Leaderboard</div>
+        </a>
+        <a class="navbar-tab-style w-inline-block w-tab-link" data-w-tab="Tab 4">
+          <div>Settings</div>
+        </a>
+      </div>
+      <div class="stocks-pane w-tab-content">
+        <div class="w-tab-pane" data-w-tab="Tab 1">
+          <div class="stock-card-container">
+            <div class="stock-card">
+              <div class="slider w-slider" data-animation="slide" data-duration="500" data-infinite="1">
+                <div class="w-slider-mask">
+                  <div class="w-slide">
+                    <div class="stock-graph2 w-embed w-hidden-small w-hidden-tiny w-script">
+                      <!-- TradingView Widget BEGIN -->
+                      <div id="tv-medium-widget-70352"></div>
+                      <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+                      <script type="text/javascript">
+                        new TradingView.MediumWidget({
+                          "container_id": "tv-medium-widget-70352",
+                          "symbols": [
+                            [
+                              "Alphabet Inc",
+                              "GOOG"
+                            ]
+                          ],
+                          "gridLineColor": "#E9E9EA",
+                          "fontColor": "#83888D",
+                          "underLineColor": "rgba(255, 255, 255, 1)",
+                          "trendLineColor": "rgba(106, 168, 79, 1)",
+                          "width": "880px",
+                          "height": "385px",
+                          "tradeItWidget": false,
+                          "locale": "en"
+                        });
+                      </script>
+                      <!-- TradingView Widget END -->
+                    </div>
+                  </div>
+                  <div class="w-slide">
+                    <div class="stock-graph w-embed w-hidden-small w-hidden-tiny w-script">
+                      <!-- TradingView Widget BEGIN -->
+                      <div id="tv-medium-widget-70352"></div>
+                      <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+                      <script type="text/javascript">
+                        new TradingView.MediumWidget({
+                          "container_id": "tv-medium-widget-70352",
+                          "symbols": [
+                            [
+                              "Apple Inc.",
+                              "AAPL"
+                            ]
+                          ],
+                          "gridLineColor": "#E9E9EA",
+                          "fontColor": "#83888D",
+                          "underLineColor": "rgba(255, 255, 255, 1)",
+                          "trendLineColor": "rgba(106, 168, 79, 1)",
+                          "width": "880px",
+                          "height": "370px",
+                          "tradeItWidget": false,
+                          "locale": "en"
+                        });
+                      </script>
+                      <!-- TradingView Widget END -->
+                    </div>
+                  </div>
+                </div>
+                <div class="w-slider-arrow-left">
+                  <div class="w-icon-slider-left"></div>
+                </div>
+                <div class="w-slider-arrow-right">
+                  <div class="w-icon-slider-right"></div>
+                </div>
+                <div class="w-round w-slider-nav"></div>
+              </div><img class="static-graph w-hidden-main" src="images/static_line_chart.PNG" width="267">
+              <div class="btn-row w-row">
+                <div class="bet-up-column w-col w-col-6"><a class="bet-btn" href="#">goes up!</a>
+                  <div class="people-prediction">
+                    <div class="predictions stat-label">people predicting up</div>
+                    <div class="actual-stat">2,998</div>
+                  </div>
+                </div>
+                <div class="bet-down-column w-col w-col-6"><a class="bet-btn bet-down" href="#">GOes down!</a>
+                  <div class="bet-down-stat people-prediction">
+                    <div class="predictions stat-label">people predicting DOWN</div>
+                    <div class="actual-stat bet-down-stat">1,172</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w--tab-active w-tab-pane" data-w-tab="Tab 2">
+          <div class="balance-header">Balance &amp; Payment</div>
+          <div class="balance-container">
+            <div class="balance-row w-row">
+              <div class="w-col w-col-6">
+                <div class="balance-value">$50.67</div>
+              </div>
+              <div class="w-col w-col-6">
+                <div class="balance-value token-value">47 tokens</div>
+              </div>
+            </div>
+            <div class="payment-row w-row">
+              <div class="existing-cards w-col w-col-6">
+                <div class="example-card">KAT WICKS xxxx9471 - MASTERCARD DEBIT</div>
+                <div class="example-card">KAT WICKS xxxx3934 - VISA CREDIT</div>
+              </div>
+              <div class="deposit-withdraw-buttons w-col w-col-6"><a class="add-a-card-btn w-button" href="#">add a card</a><a class="deposit-button w-button" href="#">Deposit</a><a class="deposit-button w-button" href="#">Withdraw</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-tab-pane" data-w-tab="Tab 3"></div>
+        <div class="w-tab-pane" data-w-tab="Tab 4"></div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script type="text/javascript" src="js/webflow.js"></script>
+  <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.unslider/1.0.0/unslider.js" />
+  <style>
+    .unslider{overflow:auto;margin:0;padding:0}.unslider-wrap{position:relative}.unslider-wrap.unslider-carousel>li{float:left}.unslider-vertical>ul{height:100%}.unslider-vertical li{float:none;width:100%}.unslider-fade{position:relative}.unslider-fade .unslider-wrap li{position:absolute;left:0;top:0;right:0;z-index:8}.unslider-fade .unslider-wrap li.unslider-active{z-index:10}.unslider li,.unslider ol,.unslider ul{list-style:none;margin:0;padding:0;border:none}.unslider-arrow{position:absolute;left:20px;z-index:2;cursor:pointer}.unslider-arrow.next{left:auto;right:20px
+  </style>
+  <div class="hi">
+    <ul>
+      <li>My slide</li>
+      <li>Another slide</li>
+      <li>My last slide</li>
+    </ul>
+  </div>
+  <!--
+	<script>
+		jQuery(document).ready(function($) {
+			$('.my-slider').unslider();
+		});
+	</script>
+  -->
+</body>
+</html>
