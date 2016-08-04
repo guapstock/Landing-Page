@@ -461,6 +461,31 @@
 	// shim for using process in browser
 
 	var process = module.exports = {};
+
+	// cached from whatever global is present so that test runners that stub it
+	// don't break things.  But we need to wrap it in a try catch in case it is
+	// wrapped in strict mode code which doesn't define any globals.  It's inside a
+	// function because try/catches deoptimize in certain engines.
+
+	var cachedSetTimeout;
+	var cachedClearTimeout;
+
+	(function () {
+	  try {
+	    cachedSetTimeout = setTimeout;
+	  } catch (e) {
+	    cachedSetTimeout = function () {
+	      throw new Error('setTimeout is not defined');
+	    }
+	  }
+	  try {
+	    cachedClearTimeout = clearTimeout;
+	  } catch (e) {
+	    cachedClearTimeout = function () {
+	      throw new Error('clearTimeout is not defined');
+	    }
+	  }
+	} ())
 	var queue = [];
 	var draining = false;
 	var currentQueue;
@@ -485,7 +510,7 @@
 	    if (draining) {
 	        return;
 	    }
-	    var timeout = setTimeout(cleanUpNextTick);
+	    var timeout = cachedSetTimeout(cleanUpNextTick);
 	    draining = true;
 
 	    var len = queue.length;
@@ -502,7 +527,7 @@
 	    }
 	    currentQueue = null;
 	    draining = false;
-	    clearTimeout(timeout);
+	    cachedClearTimeout(timeout);
 	}
 
 	process.nextTick = function (fun) {
@@ -514,7 +539,7 @@
 	    }
 	    queue.push(new Item(fun, args));
 	    if (queue.length === 1 && !draining) {
-	        setTimeout(drainQueue, 0);
+	        cachedSetTimeout(drainQueue, 0);
 	    }
 	};
 
@@ -3111,7 +3136,7 @@
 	    data.open = false;
 	    data.button.removeClass(buttonOpen);
 	    var config = data.config;
-	    if (config.animation === 'none' || !tram.support.transform) immediate = true;
+	    if (config.animation === 'none' || !tram.support.transform || config.duration <= 0) immediate = true;
 	    ix.outro(0, data.el[0]);
 
 	    // Stop listening for tap outside events
@@ -4576,5 +4601,7 @@
  * Webflow: Interactions: Init
  */
 Webflow.require('ix').init([
-  {"slug":"change","name":"Change ","value":{"style":{},"triggers":[]}}
+  {"slug":"change","name":"Change ","value":{"style":{},"triggers":[]}},
+  {"slug":"dont-show-on-load","name":"Don't Show on Load","value":{"style":{"display":"none","opacity":0},"triggers":[]}},
+  {"slug":"open-profile-dropdown","name":"Open Profile Dropdown","value":{"style":{},"triggers":[{"type":"click","selector":".profile-dropdown","loopA":true,"stepsA":[{"display":"block","opacity":1,"wait":250,"transition":"transform 500ms ease 0ms, opacity 500ms ease 0ms","x":"0px","y":"0px","z":"0px"}],"stepsB":[{"opacity":0,"wait":250,"transition":"transform 500ms ease 0ms, opacity 250ms ease 0ms","x":"0px","y":"0px","z":"0px"},{"display":"none"}]}]}}
 ]);

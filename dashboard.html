@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <!-- This site was created in Webflow. http://www.webflow.com-->
-<!-- Last Published: Wed Jul 20 2016 14:30:00 GMT+0000 (UTC) -->
-<html data-wf-site="578837814ab597be57d7900f" data-wf-page="578c190718f10cd163ae538a">
+<!-- Last Published: Mon Aug 01 2016 15:59:09 GMT+0000 (UTC) -->
+<html data-wf-page="578c190718f10cd163ae538a" data-wf-site="578837814ab597be57d7900f">
 <head>
   <meta charset="utf-8">
   <title>Dashboard</title>
-  <meta property="og:title" content="Dashboard">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="generator" content="Webflow">
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/webflow.css">
-  <link rel="stylesheet" type="text/css" href="css/guapp.webflow.css">
+  <meta content="Dashboard" property="og:title">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/guapp.webflow.css" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
-  <script>
+  <script type="text/javascript">
     WebFont.load({
       google: {
         families: ["Roboto:100,100italic,300,300italic,regular,italic,500,700,900"]
       }
     });
   </script>
-  <script type="text/javascript" src="js/modernizr.js"></script>
-  <link rel="shortcut icon" type="image/x-icon" href="images/icon.png">
-  <link rel="apple-touch-icon" href="images/webclip.png">
+  <script src="js/modernizr.js" type="text/javascript"></script>
+  <link href="images/icon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.png" rel="apple-touch-icon">
 </head>
 <body class="has-left-sidebar">
   <div class="header-div w-clearfix"><img class="top-left-logo" height="50" src="images/Guap V3 with border-01.png">
     <div class="search-bar-wrapper w-form">
       <form class="search-form w-clearfix" data-name="Email Form" id="email-form" name="email-form">
-        <input class="search-box w-input" data-name="Search" id="Search" maxlength="256" name="Search" placeholder="                                          🔍" type="text"><img class="logout-icon" src="images/159707.png" width="31"><img class="profile-image w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny" src="images/blank-profile-picture-973460_1280.png" width="41">
+        <input class="search-box w-input" data-name="Search" id="Search" maxlength="256" name="Search" placeholder="                                          🔍" type="text"><img class="logout-icon w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny" src="images/159707.png" width="31"><img class="profile-image" data-ix="open-profile-dropdown" src="images/blank-profile-picture-973460_1280.png" width="41">
       </form>
       <div class="w-form-done">
         <div>Thank you! Your submission has been received!</div>
@@ -37,10 +37,12 @@
       </div>
     </div>
   </div>
+  <div class="profile-dropdown" data-ix="dont-show-on-load"><a class="contact-us-link" href="http://guapstock.com/contactus">contact us</a><a class="contact-us-link" href="http://guapstock.com/contactus">LoGOUT</a>
+  </div>
   <div class="container">
     <div class="w-tabs" data-duration-in="300" data-duration-out="100">
       <div class="navbar-menu w-tab-menu">
-        <a class="navbar-tab-style w--current w-inline-block w-tab-link" data-w-tab="Tab 1">
+        <a class="navbar-tab-style w-inline-block w-tab-link" data-w-tab="Tab 1">
           <div>Stocks</div>
         </a>
         <a class="navbar-tab-style w-inline-block w-tab-link" data-ix="change" data-w-tab="Tab 2">
@@ -49,79 +51,40 @@
         <a class="navbar-tab-style w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny w-inline-block w-tab-link" data-w-tab="Tab 3">
           <div>Leaderboard</div>
         </a>
-        <a class="navbar-tab-style w-inline-block w-tab-link" data-w-tab="Tab 4">
+        <a class="navbar-tab-style w--current w-inline-block w-tab-link" data-w-tab="Tab 4">
           <div>Settings</div>
         </a>
       </div>
       <div class="stocks-pane w-tab-content">
-        <div class="w--tab-active w-tab-pane" data-w-tab="Tab 1">
+        <div class="w-tab-pane" data-w-tab="Tab 1">
           <div class="stock-card-container">
             <div class="stock-card">
               <div class="slider w-slider" data-animation="slide" data-duration="500" data-infinite="1">
                 <div class="w-slider-mask">
-                  <div class="w-slide">
-                    <div class="stock-graph2 w-embed w-hidden-small w-hidden-tiny w-script">
-                      <!-- TradingView Widget BEGIN -->
-                      <div id="tv-medium-widget-70352"></div>
-                      <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
-                      <script type="text/javascript">
-                        new TradingView.MediumWidget({
-                          "container_id": "tv-medium-widget-70352",
-                          "symbols": [
-                            [
-                              "Alphabet Inc",
-                              "GOOG"
-                            ]
-                          ],
-                          "gridLineColor": "#E9E9EA",
-                          "fontColor": "#83888D",
-                          "underLineColor": "rgba(255, 255, 255, 1)",
-                          "trendLineColor": "rgba(106, 168, 79, 1)",
-                          "width": "840px",
-                          "height": "360px",
-                          "tradeItWidget": false,
-                          "locale": "en"
-                        });
-                      </script>
-                      <!-- TradingView Widget END -->
+                  <div class="actual-stat w-slide">
+                    <div><img src="images/applecapture.PNG">
                     </div>
                   </div>
                   <div class="w-slide">
-                    <div class="stock-graph w-embed w-hidden-small w-hidden-tiny w-script">
-                      <!-- TradingView Widget BEGIN -->
-                      <div id="tv-medium-widget-70352"></div>
-                      <script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
-                      <script type="text/javascript">
-                        new TradingView.MediumWidget({
-                          "container_id": "tv-medium-widget-70352",
-                          "symbols": [
-                            [
-                              "Apple Inc.",
-                              "AAPL"
-                            ]
-                          ],
-                          "gridLineColor": "#E9E9EA",
-                          "fontColor": "#83888D",
-                          "underLineColor": "rgba(255, 255, 255, 1)",
-                          "trendLineColor": "rgba(106, 168, 79, 1)",
-                          "width": "840px",
-                          "height": "370px",
-                          "tradeItWidget": false,
-                          "locale": "en"
-                        });
-                      </script>
-                      <!-- TradingView Widget END -->
+                    <div><img src="images/jpmcapture.PNG">
+                    </div>
+                  </div>
+                  <div class="w-slide">
+                    <div><img src="images/googlecapture.PNG">
+                    </div>
+                  </div>
+                  <div class="w-slide">
+                    <div><img src="images/msftcapture.PNG">
+                    </div>
+                  </div>
+                  <div class="w-slide">
+                    <div><img src="images/mmmcapture.PNG">
                     </div>
                   </div>
                 </div>
-                <div class="w-slider-arrow-left">
-                  <div class="w-icon-slider-left"></div>
-                </div>
-                <div class="w-slider-arrow-right">
-                  <div class="w-icon-slider-right"></div>
-                </div>
-                <div class="w-round w-slider-nav"></div>
-              </div><img class="static-graph w-hidden-main" src="images/static_line_chart.PNG" width="267">
+                <div class="w-slider-arrow-left"></div>
+                <div class="w-slider-arrow-right"></div>
+              </div>
               <div class="btn-row w-row">
                 <div class="bet-up-column w-col w-col-6"><a class="bet-btn" href="#">goes up!</a>
                   <div class="people-prediction">
@@ -147,12 +110,10 @@
               <div class="w-col w-col-6">
                 <div class="balance-value">$17.38</div>
               </div>
-              <div class="w-col w-col-6">
-                <div class="balance-value token-value">47 tokens</div>
-              </div>
+              <div class="w-col w-col-6"></div>
             </div>
             <div class="payment-row w-row">
-              <div class="existing-cards w-col w-col-6">
+              <div class="existing-cards w-col w-col-6 w-hidden-main w-hidden-medium w-hidden-small w-hidden-tiny">
                 <div class="example-card">KAT WICKS xxxx9471 - MASTERCARD <strong>DEBIT</strong>
                 </div>
                 <div class="example-card">KAT WICKS xxxx3934 - VISA <strong>CREDIT</strong>
@@ -187,7 +148,7 @@
                     <ul class="w-list-unstyled">
                       <li class="recent-trades">You recently predicted <strong>Apple Inc</strong>. would go up for <strong>4.00 dollars</strong> on <strong>7/19/16 at 1PM EST.</strong>
                       </li>
-                      <li class="recent-trades">You recently predicted <strong>Chipotle</strong>&nbsp;would go up for <strong>2.00 dollars</strong> on <strong>7/19/16 at 12PM EST.</strong>
+                      <li class="recent-trades">You recently predicted <strong>Google </strong>would go up for <strong>2.00 dollars</strong> on <strong>7/19/16 at 12PM EST.</strong>
                       </li>
                       <li class="recent-trades">You recently predicted <strong>guap</strong> would go up for <strong>40.00 dollars</strong> on <strong>7/18/16</strong> at <strong>8:30AM EST.</strong>
                       </li>
@@ -199,43 +160,42 @@
           </div>
         </div>
         <div class="w-tab-pane" data-w-tab="Tab 3"></div>
-        <div class="w-tab-pane" data-w-tab="Tab 4">
+        <div class="w--tab-active w-tab-pane" data-w-tab="Tab 4">
           <div class="profile-settings-container">
             <div class="profile-settings-header"><strong>profile</strong> settings</div>
-            <a class="pfp-container w-inline-block" href="#"><img class="big-pfp" src="images/blank-profile-picture-973460_1280.png" width="150">
-            </a>
-            <div class="basic-profile-information">primary email:</div>
-            <div>password:</div>
-            <div class="w-row">
-              <div class="w-col w-col-3"></div>
-              <div class="w-col w-col-9"></div>
+            <div class="profile-container"><img class="big-pfp" src="images/blank-profile-picture-973460_1280.png" width="150">
+              <div class="basic-profile-info-container w-container">
+                <div class="profile-info-lbl">email:</div>
+                <div class="profile-info-lbl">full name:</div>
+                <div class="profile-info-lbl">username:</div>
+              </div>
+              <div class="basic-profile-info-container w-container">
+                <div class="basic-profile-info">shashanktej@gmail.com</div>
+                <div class="basic-profile-info">Shashank Addagarla</div>
+                <div class="basic-profile-info">_formless</div>
+              </div>
+            </div>
+            <div class="form-wrapper-profile w-form">
+              <form data-name="Email Form 2" id="email-form-2" name="email-form-2">
+                <input class="age-field w-input" data-name="Name" id="name" maxlength="256" name="name" placeholder="enter your age" type="text">
+                <input class="age-field w-input" data-name="Location" id="Location" maxlength="256" name="Location" placeholder="enter a new primary email" required="required" type="text">
+                <input class="age-field w-input" id="field" maxlength="256" name="field" placeholder="average bet amount in USD" required="required" type="text">
+                <input class="submit-button w-button" data-wait="Please wait..." type="submit" value="Submit">
+              </form>
+              <div class="w-form-done">
+                <div>Thank you! Your submission has been received!</div>
+              </div>
+              <div class="w-form-fail">
+                <div>Oops! Something went wrong while submitting the form</div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-  <script type="text/javascript" src="js/webflow.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
   <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/jquery.unslider/1.0.0/unslider.js" />
-  <style>
-    .unslider{overflow:auto;margin:0;padding:0}.unslider-wrap{position:relative}.unslider-wrap.unslider-carousel>li{float:left}.unslider-vertical>ul{height:100%}.unslider-vertical li{float:none;width:100%}.unslider-fade{position:relative}.unslider-fade .unslider-wrap li{position:absolute;left:0;top:0;right:0;z-index:8}.unslider-fade .unslider-wrap li.unslider-active{z-index:10}.unslider li,.unslider ol,.unslider ul{list-style:none;margin:0;padding:0;border:none}.unslider-arrow{position:absolute;left:20px;z-index:2;cursor:pointer}.unslider-arrow.next{left:auto;right:20px
-  </style>
-  <div class="hi">
-    <ul>
-      <li>My slide</li>
-      <li>Another slide</li>
-      <li>My last slide</li>
-    </ul>
-  </div>
-  <!--
-	<script>
-		jQuery(document).ready(function($) {
-			$('.my-slider').unslider();
-		});
-	</script>
-  -->
 </body>
 </html>

@@ -134,8 +134,11 @@ body {
 }
 
 .navbar-container {
+  display: block;
   max-width: 1200px;
   margin-top: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .container {
@@ -193,6 +196,7 @@ body {
 .submit-button {
   display: block;
   margin-top: 27px;
+  margin-left: 46px;
   padding: 15px 30px;
   border-radius: 5px;
   background-color: #d6d962;
@@ -218,6 +222,7 @@ body {
   padding-top: 8px;
   padding-right: 12px;
   padding-bottom: 8px;
+  border-radius: 2px;
   font-family: Roboto, sans-serif;
   color: #000;
   font-weight: 500;
@@ -227,6 +232,7 @@ body {
 .email-field {
   margin-top: 0px;
   padding-top: 8px;
+  border-radius: 2px;
   font-family: Roboto, sans-serif;
   color: #000;
   font-weight: 500;
@@ -238,11 +244,11 @@ body {
   margin-top: 0px;
   margin-left: 0px;
   background-color: rgba(41, 70, 4, 0);
-  background-image: -webkit-linear-gradient(270deg, rgba(86, 138, 62, .94), rgba(86, 138, 62, .94)), url('../images/guap avocado only.png');
-  background-image: linear-gradient(180deg, rgba(86, 138, 62, .94), rgba(86, 138, 62, .94)), url('../images/guap avocado only.png');
+  background-image: -webkit-linear-gradient(270deg, rgba(101, 192, 59, .34), rgba(101, 192, 59, .34)), url('../images/pattern2.png');
+  background-image: linear-gradient(180deg, rgba(101, 192, 59, .34), rgba(101, 192, 59, .34)), url('../images/pattern2.png');
   background-position: 0px 0px, 50% 50%;
-  background-size: auto, 975px;
-  background-repeat: repeat, no-repeat;
+  background-size: auto, 225px;
+  background-repeat: repeat, repeat;
   opacity: 0.85;
 }
 
@@ -395,7 +401,7 @@ body {
 .login-box {
   display: block;
   max-width: 1000px;
-  margin: 244px auto 0px;
+  margin: 125px auto 0px;
   padding: 35px;
   border-style: solid;
   border-width: 1px;
@@ -427,6 +433,7 @@ body {
 }
 
 .body-section {
+  overflow: hidden;
   height: auto;
   background-color: hsla(66, 71%, 77%, .26);
   background-image: -webkit-linear-gradient(270deg, hsla(0, 0%, 100%, .6), hsla(0, 0%, 100%, .6)), url('../images/tile-white.png');
@@ -444,6 +451,7 @@ body {
 }
 
 .what-we-offer-section {
+  display: none;
   margin-bottom: 0px;
   background-color: hsla(57, 52%, 85%, .78);
   background-image: -webkit-linear-gradient(270deg, hsla(57, 52%, 85%, .78), hsla(57, 52%, 85%, .78)), url('../images/allalalla.png');
@@ -496,7 +504,7 @@ body {
 }
 
 .buttom-section-large-margin {
-  margin-top: 261px;
+  margin-top: 50px;
 }
 
 .header-div {
@@ -564,12 +572,19 @@ body {
 .profile-image {
   position: relative;
   margin-top: 5px;
-  margin-right: 9px;
+  margin-right: 8px;
   margin-left: 32px;
   padding-right: 0px;
   padding-left: 0px;
   float: right;
   border-radius: 50%;
+  opacity: 0.6;
+  -webkit-transition: opacity 300ms ease;
+  transition: opacity 300ms ease;
+}
+
+.profile-image:hover {
+  opacity: 1;
 }
 
 .has-left-sidebar {
@@ -595,13 +610,6 @@ body {
   border-width: 2px;
   border-color: rgba(0, 0, 0, .06);
   border-bottom-style: solid;
-}
-
-.tab-title {
-  margin-bottom: 30px;
-  font-family: Roboto, sans-serif;
-  font-size: 32px;
-  font-weight: 300;
 }
 
 .navbar-tab-style {
@@ -636,7 +644,7 @@ body {
 }
 
 .slider {
-  height: 360px;
+  height: 365px;
   border-radius: 5px;
   background-color: #fff;
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .13);
@@ -664,16 +672,15 @@ body {
   font-weight: 500;
 }
 
-.balance-value.token-value {
-  color: rgba(0, 0, 0, .7);
-}
-
 .balance-row {
+  display: inline-block;
   margin-top: 5px;
   margin-left: 90px;
 }
 
 .payment-row {
+  display: inline-block;
+  width: 923px;
   margin-top: 10px;
   margin-left: 90px;
   border-style: none;
@@ -696,7 +703,7 @@ body {
 .example-card {
   margin-top: 5px;
   margin-bottom: 5px;
-  padding: 17px;
+  padding: 17px 17px 17px 0px;
   background-color: hsla(0, 0%, 89%, 0);
   font-family: Roboto, sans-serif;
   font-size: 16px;
@@ -803,8 +810,11 @@ body {
 }
 
 .profile-settings-container {
+  width: 100%;
   margin-top: 35px;
   padding: 32px 32px 32px 30px;
+  background-color: #fff;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, .16);
 }
 
 .profile-settings-header {
@@ -814,14 +824,186 @@ body {
 
 .big-pfp {
   display: inline-block;
-  margin-top: 0px;
+  margin-top: 20px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
   border-radius: 50%;
 }
 
-.basic-profile-information {
+.age-field {
+  display: block;
+  width: 90%;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: Roboto, sans-serif;
+}
+
+.sex-field {
   display: inline-block;
-  margin-left: 26px;
-  padding-bottom: 0px;
+  width: 48%;
+}
+
+.form-wrapper-profile {
+  width: 90%;
+  margin-top: 20px;
+}
+
+.left-arrow {
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  color: rgba(0, 0, 0, .1);
+  font-size: 30px;
+}
+
+.left-arrow:hover {
+  color: rgba(0, 0, 0, .25);
+}
+
+.right-arrow {
+  position: absolute;
+  left: 867px;
+  top: -110px;
+  display: inline-block;
+  opacity: 1;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
+  color: rgba(0, 0, 0, .75);
+  font-size: 30px;
+}
+
+.right-arrow:hover {
+  color: rgba(0, 0, 0, .25);
+}
+
+.contact-row {
+  padding-top: 60px;
+}
+
+.contact-us-label {
+  font-family: Roboto, sans-serif;
+  color: #4d4d4d;
+  font-size: 27px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.contact-us-directions {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  font-family: Roboto, sans-serif;
+  color: #4d4d4d;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+}
+
+.main-contact-column {
+  padding-right: 51px;
+}
+
+.contact-us-wrapper {
+  max-width: 600px;
+  padding-top: 15px;
+}
+
+.contact-field-label {
+  margin-top: 20px;
+  margin-bottom: 6px;
+  font-family: Roboto, sans-serif;
+  color: #4d4d4d;
+  text-transform: uppercase;
+}
+
+.contact-name-field {
+  border-radius: 2px;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+}
+
+.contact-email-field {
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+}
+
+.contact-message {
+  height: auto;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+}
+
+.contact-information-label {
+  margin-top: 30px;
+  font-family: Roboto, sans-serif;
+  color: #00c853;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.contact-information {
+  margin-top: 0px;
+  font-family: Roboto, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.secondary-contact-info {
+  padding-top: 125px;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 88px;
+  right: 0px;
+  z-index: 3;
+  width: 204px;
+  height: 100px;
+  margin-top: 0px;
+  margin-right: 20px;
+  margin-left: 0px;
+  padding-top: 14px;
+  background-color: #fff;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, .16);
+  opacity: 1;
+  font-family: Roboto, sans-serif;
+  text-align: center;
+}
+
+.contact-us-link {
+  display: block;
+  margin-top: 10px;
+  font-family: Roboto, sans-serif;
+  color: #00c853;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.basic-profile-info-container {
+  display: block;
+  margin-top: 0px;
+  padding-right: 202px;
+  padding-left: 0px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+}
+
+.profile-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -832,10 +1014,23 @@ body {
   align-items: center;
 }
 
-.pfp-container {
-  width: 150px;
-  height: 150px;
-  margin-top: 20px;
+.profile-info-lbl {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: Roboto, sans-serif;
+  font-weight: 500;
+}
+
+.basic-profile-info {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+}
+
+html.w-mod-js *[data-ix="dont-show-on-load"] {
+  display: none;
+  opacity: 0;
 }
 
 @media (max-width: 991px) {
