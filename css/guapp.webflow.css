@@ -1137,5 +1137,8 @@ html.w-mod-js *[data-ix="dont-show-on-load"] {
     margin-right: auto;
     margin-left: auto;
   }
+  .bottom-section {
+    display: none;
+  }
 }
 
