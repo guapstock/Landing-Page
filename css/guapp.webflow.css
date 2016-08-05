@@ -1109,7 +1109,7 @@ html.w-mod-js *[data-ix="dont-show-on-load"] {
   }
   .copyright {
     display: block;
-    width: 157px;
+    max-width: 157px;
     margin-right: auto;
     margin-left: auto;
     text-align: center;
@@ -1132,6 +1132,10 @@ html.w-mod-js *[data-ix="dont-show-on-load"] {
   .mobile-nav-menu {
     margin-top: 15px;
     background-color: hsla(0, 0%, 78%, 0);
+  }
+  .submit-button {
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
